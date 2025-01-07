@@ -9,7 +9,8 @@ Upload a CSV file, and it will be merged with a **pre-loaded reference file** fo
 """)
 
 # Load the static reference file
-static_file_path = "/Users/rsiddiq2/Downloads/FBCENC Geo 2.csv"  # Replace with your file path
+static_file_path = static_file_path = "FBCENC_Geo_2.csv"
+
 try:
     ref_df = pd.read_csv(static_file_path)
     st.write("### Reference File Preview:")
