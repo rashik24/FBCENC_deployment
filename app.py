@@ -5,7 +5,7 @@ from agency_days import processing_agency_days_and_hours
 # Title and description
 st.title("FBCENC Data Processing")
 st.write("""
-Upload a CSV file, and it will be merged with a **pre-loaded reference file** for processing.
+Upload a CSV file containing the information on agencies' operational hours. You can download the PowerBI input file and Agency Days and Hours file from here. 
 """)
 
 # Load the static reference file
