@@ -3,7 +3,7 @@ import pandas as pd
 from processed import processing
 from agency_days import processing_agency_days_and_hours
 # Title and description
-st.title("File Processing and Merging App")
+st.title("FBCENC Data Processing")
 st.write("""
 Upload a CSV file, and it will be merged with a **pre-loaded reference file** for processing.
 """)
