@@ -59,7 +59,7 @@ if uploaded_file:
     # Download button for Method 2 output
     st.download_button(
         label="Download Processed File for Agency days and hours",
-        data=final_df2.to_csv(index=False).encode('utf-8'),
+        data=out2.to_csv(index=False).encode('utf-8'),
         file_name="processed_file_agency_days.csv",
         mime="text/csv"
     )
