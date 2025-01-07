@@ -31,11 +31,10 @@ if uploaded_file:
     out = processing(new_df)
     
     # Merge the uploaded file with the static file
-    #merged_df = pd.merge(out, ref_df, on=key, how="inner")  # Default inner join
-    final_df = out.merge(ref_df[['Latitude','Longitude','No.']], on="No.", how="left")
+    
+    final_df = out.merge(ref_df[['Latitude','Longitude','No.']], on="No.", how="inner")
     # Example processing (modify this part as needed)
-    #merged_df['Processed'] = merged_df.iloc[:, 1] * 2  # Example logic - replace with your own
-
+    
     # Display the processed data
     st.write("###For PowerBI Input File")
     st.write(final_df.head())
@@ -51,8 +50,7 @@ if uploaded_file:
     # Second Processing Method
     st.write("### Agency Days and Hours")
     out2 = processing_agency_days_and_hours(new_df)
-    #final_df2 = out2.merge(ref_df[['Latitude', 'Longitude', 'No.']], on="No.", how="inner")
-
+    
     # Display the second processed output
     st.write("#### Processed Data (Method 2):")
     st.write(out2.head())
