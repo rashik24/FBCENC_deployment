@@ -37,7 +37,7 @@ if uploaded_file:
     #merged_df['Processed'] = merged_df.iloc[:, 1] * 2  # Example logic - replace with your own
 
     # Display the processed data
-    st.write("### Merged and Processed Data Preview:")
+    st.write("###For PowerBI Input File")
     st.write(final_df.head())
 
     # Download button for the processed file
@@ -49,7 +49,7 @@ if uploaded_file:
     )
 
     # Second Processing Method
-    st.write("### Processing Method 2")
+    st.write("### Agency Days and Hours")
     out2 = processing_agency_days_and_hours(new_df)
     #final_df2 = out2.merge(ref_df[['Latitude', 'Longitude', 'No.']], on="No.", how="inner")
 
