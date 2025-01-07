@@ -11,7 +11,7 @@ Upload a CSV file containing the information on agencies' operational hours. You
 # Load the static reference file
 static_file_path = "FBCENC_Geo_2.csv"  # Replace with your file path
 # try:
-#     ref_df = pd.read_csv(static_file_path)
+      ref_df = pd.read_csv(static_file_path)
 #     st.write("### Reference File Preview:")
 #     st.write(ref_df.head())
 # except Exception as e:
