@@ -33,7 +33,7 @@ if uploaded_file:
     # Merge the uploaded file with the static file
     
     final_df = out.merge(ref_df[['Latitude','Longitude','No.']], on="No.", how="inner")
-    # Example processing (modify this part as needed)
+   
     
     # Display the processed data
     st.write("###For PowerBI Input File")
@@ -48,11 +48,11 @@ if uploaded_file:
     )
 
     # Second Processing Method
-    st.write("### Agency Days and Hours")
+    st.write("Agency Days and Hours")
     out2 = processing_agency_days_and_hours(new_df)
     
     # Display the second processed output
-    st.write("#### Processed Data (Method 2):")
+    #st.write("#### Processed Data (Method 2):")
     st.write(out2.head())
 
     # Download button for Method 2 output
