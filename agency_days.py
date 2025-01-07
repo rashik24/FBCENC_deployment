@@ -103,9 +103,9 @@ def processing_agency_days_and_hours(new_df):
     import json
     
     # Load the data from the specified Excel file and sheet
-    file_path = '/Users/rsiddiq2/Documents/FBCENC Test.xlsx'
-    sheet1_data = pd.ExcelFile(file_path).parse('Sheet1')
-    
+    #file_path = '/Users/rsiddiq2/Documents/FBCENC Test.xlsx'
+    #sheet1_data = pd.ExcelFile(file_path).parse('Sheet1')
+    sheet1_data = new_df
     # Rename the columns for convenience (if necessary)
     sheet1_data.rename(columns=lambda x: x.strip(), inplace=True)  # Removing any leading/trailing whitespace
     
