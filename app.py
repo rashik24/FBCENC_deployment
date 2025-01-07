@@ -14,7 +14,7 @@ try:
       ref_df = pd.read_csv(static_file_path)
 #     st.write("### Reference File Preview:")
 #     st.write(ref_df.head())
-# except Exception as e:
+except Exception as e:
 #     st.error(f"Error loading the static file: {e}")
 #     st.stop()
 
