@@ -205,7 +205,7 @@ def processing(new_df):
         time_pattern = r"(\d{1,2}:\d{2}\s*(?:AM|PM)?(?:\s*[-to]+\s*\d{1,2}:\d{2}\s*(?:AM|PM)?)?)"
     
         # Split the text into parts for analysis
-        parts = re.split(r'[;,]', normalized_text)
+        parts = re.split(r'[;,]|\band\b', normalized_text)
     
         current_days = []
         current_weeks = []
@@ -220,7 +220,7 @@ def processing(new_df):
             # Extract weeks if mentioned
             weeks = re.findall(week_pattern, part, re.IGNORECASE)
             if weeks:
-                current_weeks = weeks
+                current_weeks.extend(weeks)
                 
             # Extract days
             days = re.findall(day_pattern, part)
